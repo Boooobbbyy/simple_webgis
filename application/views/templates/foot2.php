@@ -62,6 +62,7 @@
     }).addTo(mymap);
     <?php foreach ($lokasi as $ars) : ?>
         var marker = L.marker([<?= $ars['lat']; ?>, <?= $ars['long']; ?>]).addTo(mymap);
+        marker.bindPopup("<?= $ars['nama']; ?>").openPopup();
     <?php endforeach; ?>
 
     var circle = L.circle([-5.405, 105.200], {
@@ -196,14 +197,8 @@
         ])
         .addTo(mymap);
 
-    marker.bindPopup("400").openPopup();
-    marker2.bindPopup("1000").openPopup();
-    marker3.bindPopup("700").openPopup();
-    marker4.bindPopup("400").openPopup();
-    marker5.bindPopup("1000").openPopup();
-    marker6.bindPopup("400").openPopup();
-    marker7.bindPopup("700").openPopup();
-    marker8.bindPopup("700").openPopup();
+
+
     circle.bindPopup("Jalan Teuku Cik Ditro");
 
 
